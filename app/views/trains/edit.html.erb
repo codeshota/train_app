@@ -1,29 +1,6 @@
-<h1>Editing Train</h1>
+<h1>Редатировать Поезд</h1>
 
-<%#= render 'form', train: @train %>
+<%= render 'form'%>
 
-<%= form_with(model: @train, local: true) do |form| %>
-  <% if @train.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@train.errors.count, "error") %> prohibited this railway_station from being saved:</h2>
-
-      <ul>
-        <% @train.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :number %>
-    <%= form.text_field :number %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Show', @train %> |
-<%= link_to 'Back', train_path %>
+<%= link_to 'Показать', @train %> |
+<%= link_to 'Вернуться', train_path %>
