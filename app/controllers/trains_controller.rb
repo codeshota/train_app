@@ -34,7 +34,6 @@ class TrainsController < ApplicationController
   end
 
   def destroy
-    @train = Train.find(params[:id])
     @train.destroy
     redirect_to trains_path
   end
